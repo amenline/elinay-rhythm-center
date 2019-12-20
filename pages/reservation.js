@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Personal Info', 'Schedule details', 'Review'];
 
 function getStepContent(step) {
   switch (step) {
@@ -82,8 +82,8 @@ const Reservation = () => {
         <ThemeProvider theme={theme}>
           <main className={classes.layout}>
             <Paper className={classes.paper}>
-              <Typography component="h1" variant="h4" align="center">
-                Checkout
+              <Typography component="h1" variant="h4" align="center" color="primary">
+                Make a booking
               </Typography>
               <Stepper activeStep={activeStep} className={classes.stepper}>
                 {steps.map(label => (
@@ -96,11 +96,11 @@ const Reservation = () => {
                 {activeStep === steps.length ? (
                   <React.Fragment>
                     <Typography variant="h5" gutterBottom>
-                      Thank you for your order.
+                      Thank you for booking.
                     </Typography>
                     <Typography variant="subtitle1">
-                      Your order number is #2001539. We have emailed your order confirmation, and will
-                      send you an update when your order has shipped.
+                      We have emailed your booking schedules, and will
+                      call or send you an update should there be any unforeseen changes.
                     </Typography>
                   </React.Fragment>
                 ) : (
@@ -118,7 +118,7 @@ const Reservation = () => {
                         onClick={handleNext}
                         className={classes.button}
                       >
-                        {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                        {activeStep === steps.length - 1 ? 'Proceed to book' : 'Next'}
                       </Button>
                     </div>
                   </React.Fragment>
