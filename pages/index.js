@@ -10,9 +10,6 @@ import theme from '../themes/theme';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: "url('static/hiclipart.png')",
@@ -23,65 +20,21 @@ const useStyles = makeStyles(theme => ({
     height: '100vh',
     padding: theme.spacing(8, 0, 6),
   },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-  cardHeader: {
-    backgroundColor: theme.palette.grey[200],
-  },
-  cardNumbering: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
-  },
   secondSector: {
     backgroundColor: '#d09d6a', //gradient #e1672f
-    paddingTop: '20px',
-    paddingTop: '20px',
-    paddingBottom: '20px',
+    backgroundImage: "url('static/soundwaves.png')",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
   },
   lastSector: {
     backgroundColor: '#767675', //gradient #e1672f
-    paddingTop: '20px',
-    paddingTop: '20px',
-    paddingBottom: '20px',
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
   },
 }));
-
-const figures = [
-  {
-    title: 'Start-Ups',
-    number: 120
-  },
-  {
-    title: 'Community memebers',
-    number: 800
-  },
-  {
-    title: 'Trained Project beneficiaries',
-    number: 1345
-  },
-  {
-    title: 'Women Empowered',
-    number: 500
-  },
-];
 
 const Index = () => {
   const classes = useStyles();  
